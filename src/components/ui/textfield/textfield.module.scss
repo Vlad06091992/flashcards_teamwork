@@ -1,0 +1,96 @@
+.root{
+  position: relative;
+}
+
+input {
+  font-size: var(--font-size-m);
+  color: var(--color-light-100); /* Цвет текста */
+  background-color: var(--color-dark-900); /* Желаемый цвет фона */
+  border: 1px solid grey;
+
+  &:hover {
+    background-color: var(--color-dark-700)
+  }
+
+  &:active {
+    outline: 1px solid var(--color-info-700);
+  }
+
+  &:focus {
+    outline: 1px solid var(--color-info-700);
+  }
+}
+
+
+.inputStandart {
+  width: 100%;
+  padding: 7px 10px;
+}
+
+.inputSearch {
+  width: 100%;
+  padding: 7px 10px 7px 40px;
+}
+
+.inputVisible {
+  width: 100%;
+  padding: 7px 40px 7px 10px;
+}
+
+.inputPrimary {
+  outline: 1px solid var(--color-dark-300);
+
+  &:focus {
+    outline: 2px solid var(--color-info-700);
+  }
+
+  &:active {
+    outline: 2px solid var(--color-light-100);
+  }
+}
+
+
+.inputError, .inputError:focus, .inputError:active {
+  color: var(--color-danger-300);
+  outline: 1px solid var(--color-danger-300);
+}
+
+.iconSearch {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+
+  font-size: 20px;
+  color: var(--color-dark-300)
+}
+
+.iconVisible {
+  cursor: pointer;
+
+  position: absolute;
+  top: 8px;
+  left: 85%;
+
+  width: 20px;
+
+  font-size: 20px;
+  color: var(--color-light-100);
+}
+
+
+.label {
+  margin: 0;
+  color: var(--color-dark-100);
+  text-align: left;
+}
+
+.inputDisabled {
+  pointer-events: none; /* Запретить события указателя */
+  cursor: not-allowed; /* Изменить курсор */
+  text-decoration: none; /* Убрать подчеркивание */
+  opacity: 0.5;
+}
+
+.error{
+  text-align: left;
+}

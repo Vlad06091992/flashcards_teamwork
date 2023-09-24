@@ -1,0 +1,112 @@
+* {
+  outline: none;
+}
+
+.root {
+  position: relative;
+  left: -16px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  &::before {
+    content: '';
+
+    position: relative;
+    z-index: 2;
+    left: 16px;
+
+    width: 36px;
+    height: 36px;
+    margin: -10px;
+
+    opacity: 0;
+    background-color: var(--color-dark-500);
+    border-radius: 18px;
+  }
+
+  &:hover::before {
+    color: var(--color-dark-500);
+    opacity: 1;
+  }
+
+  &:hover:focus::before, &:hover:active::before {
+    opacity: 1;
+    background: var(--color-dark-100);
+  }
+
+  &:not(:hover):focus::before, &:not(:hover):active::before {
+    opacity: 1;
+    background: var(--color-dark-100);
+  }
+
+}
+
+.root_disabled {
+  position: relative;
+  left: -16px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  padding-left: 16px;
+
+  opacity: 0.5;
+
+  &::before {
+    opacity: 0;
+  }
+}
+
+
+.CheckboxRoot {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: var(--color-light-100);
+  border-radius: 4px;
+
+}
+
+.CheckboxRoot_checked {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: var(--color-dark-900);
+  outline: 2px solid var(--color-light-900);
+}
+
+
+.CheckboxIndicator {
+  color: var(--color-dark-900);
+}
+
+.CheckboxIndicator,
+.CheckboxIcon {
+  position: relative;
+  z-index: 2;
+  top: 1px
+}
+
+.label {
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--color-light-900);
+}
+
+.label_checked {
+  color: var(--color-light-100);
+}

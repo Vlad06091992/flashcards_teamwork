@@ -1,0 +1,126 @@
+.button {
+  cursor:pointer;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 5px 29px;
+
+  font-size: var(--font-size-s);
+
+  border-radius: 4px;
+
+  &:focus {
+    outline: 2px solid var(--color-info-500);
+  }
+}
+
+
+.primary, .primary:visited {
+  background-color: var(--color-accent-500);
+
+  &:active {
+    background-color: var(--color-accent-700);
+  }
+
+  &:not(:active):hover {
+    background-color: var(--color-accent-300);
+  }
+
+  &:disabled, &:disabled:hover, {
+    background-color: var(--color-accent-900);
+  }
+}
+
+
+.secondary {
+  background-color: var(--color-dark-300);
+
+  &:active {
+    background-color: var(--color-dark-500);
+  }
+
+  &:not(:active):hover {
+    background-color: var(--color-dark-100);
+  }
+
+  &:disabled, &:disabled:hover {
+    opacity: 0.5;
+    background-color: var(--color-dark-100);
+  }
+}
+
+
+.tertiary {
+  color: var(--color-accent-500);
+  background: var(--color-dark-900);
+  border: 2px solid var(--color-accent-500);
+
+  &:active {
+    background-color: var(--color-accent-700);
+  }
+
+  &:not(:active):hover {
+    background-color: var(--color-dark-500);
+  }
+
+  &:not(:active):hover {
+    background-color: var(--color-dark-500);
+  }
+}
+
+
+.link, .link:visited {
+  display: inline-block;
+
+  padding: 6px 16px;
+
+  font-size: var(--font-size-m);
+  color: var(--color-accent-500);
+  text-decoration: none;
+
+  &:active, &:active:visited {
+    color: var(--color-accent-700);
+  }
+
+;
+
+  &:focus {
+    border-radius: 20px;
+  }
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+}
+
+
+.disabledLink {
+  pointer-events: none; /* Запретить события указателя */
+  cursor: not-allowed; /* Изменить курсор */
+  text-decoration: none; /* Убрать подчеркивание */
+  opacity: 0.5;
+}
+
+
+//.link-disabled:active {
+//  color: red;
+//  border: none;
+//
+//  &:active:visited:hover, &:active:hover {
+//    cursor: none;
+//    font-size: 20px;
+//    color: red;
+//    border: none
+//  }
+//}
+
+
+.fullwidth {
+  width: 100%;
+}
+
